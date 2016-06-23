@@ -1,0 +1,38 @@
+.sidebar {
+	h4 {
+		display: block;
+		margin-top: 30px;
+		padding: 12px 10px;
+		border: {
+			left: 2px solid #050505;
+			top: 2px solid #050505;
+		}
+		font-size: 20px;
+		font-family: Dejima;
+		text-align: center;
+		color: #fff;
+		&:first-child {
+			margin-top: 15px;
+		}
+	}
+	.list {
+		&.no-mark {
+			width: 160px;
+			margin: 0 auto;
+		}
+		li {
+			margin: 8px 0;
+			font-size: 15px;
+			a {
+				color: $orange;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			.anchor-dummy {
+				color: desaturate($orange, 40%);
+			}
+		}
+	}
+	@import "menu-tree";
+}

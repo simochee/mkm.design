@@ -1,0 +1,112 @@
+.main-area {
+	.recommend {
+		width: 680px;
+		margin: 0 auto;
+		.eyecatch {
+			img {
+				width: 680px;
+			}
+		}
+		.details {
+			overflow: hidden;
+			margin: 20px 16px;
+			.name {
+				float: left;
+				margin-bottom: 10px;
+				font-size: 20px;
+				color: $orange;
+				font-family: Dejima;
+			}
+			.prace {
+				float: right;
+				color: #aaa;
+				font-size: 14px;
+			}
+			.comment {
+				clear: both;
+				margin: 6px 20px 0;
+				font-size: 14px;
+				color: #ccc;
+			}
+		}
+	}
+}
+
+.sidebar {
+	.open-calendar {
+		width: 100%;
+		margin-top: 15px;
+		color: #fff;
+		text-align: center;
+		.year {
+			font-size: 13px;
+		}
+		.month {
+			font-size: 30px;
+			line-height: 50px;
+		}
+		.calendar {
+			width: 240px;
+			th, td {
+				box-sizing: border-box;
+				text-align: center;
+				&:not(:nth-child(7n)) {
+					border-right: 1px solid #111;
+				}
+			}
+			th {
+				height: 25px;
+				padding-top: 10px;
+				padding-bottom: 8px;
+				line-height: 25px;
+				font-size: 14px;
+			}
+			td {
+				height: 35px;
+				line-height: 35px;
+				font-size: 15px;
+				color: #969696;
+				&.today,
+				&.holiday,
+				&.close {
+					font-weight: bold;
+				}
+				&.today {
+					text-decoration: underline;
+				}
+				&.holiday {
+					color: $orange;
+				}
+				&.close {
+					color: $green;
+				}
+			}
+			tr:last-child td {
+				padding-bottom: 10px;
+			}
+		}
+		.means {
+			margin-top: 15px;
+			& > span {
+				font-size: 14px;
+			}
+			.holiday {
+				color: $orange;
+			}
+			.close {
+				color: $green;
+			}
+			.details {
+				margin-top: 5px;
+				a {
+					color: #aaa;
+					font-size: 13px;
+					text-decoration: none;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.btn {
+	display: table;
+	text-decoration: none;
+	color: #fff;
+	&.ghost {
+		margin: 0 auto;
+		padding: 1em 1.5em;
+		border: 1px solid #fff;
+		background: none;
+		font-size: 13px;
+		cursor: pointer;
+		@include transition(box-shadow .2s ease);
+		&:hover {
+			box-shadow: inset 0 0 20px rgba(#fff, 0.6);
+		}
+		&.arrow-left {
+			&::before {
+				content: "\f363";
+				margin-right: 0.5em;
+				font-family: "Ionicons";
+			}
+		}
+	}
+}

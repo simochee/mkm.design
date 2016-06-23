@@ -1,0 +1,78 @@
+.header-nav {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 760px;
+	height: 240px;
+	margin: -120px -380px;
+	.left-nav {
+		float: left;
+	}
+	.right-nav {
+		float: right;
+		.nav-item {
+			float: right;
+		}
+	}
+	.nav-list {
+		width: 260px;
+		.nav-item {
+			width: 240px;
+			height: 70px;
+			text-align: center;
+			line-height: 66px;
+			font-size: 20px;
+			font-family: serif;
+			font-weight: bold;
+			&:nth-child(2) {
+				margin: 15px 0;
+			}
+			.nav-anchor {
+				$animate: .3s;
+				overflow: hidden;
+				position: relative;
+				display: block;
+				border: 2px solid #fff;
+				color: #fff;
+				text-decoration: none;
+				z-index: 1;
+				@include transition(border-color $animate ease);
+				&::after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 0;
+					height: 230px;
+					margin: -115px 0;
+					background: #fff;
+					z-index: -1;
+					@include transform(rotate(45deg));
+					@include transition(margin $animate ease, width $animate ease, background $animate ease);
+				}
+				&:hover {
+					border-color: #000;
+					&::after {
+						width: 190px;
+						margin: {
+							left: -95px;
+							right: -95px;
+						}
+						background: #000;
+					}
+				}
+			}
+
+		}
+	}
+	.header-brand {
+		$size: 240px;
+		overflow: hidden;
+		float: left;
+		width: $size;
+		height: 0;
+		padding-top: $size;
+		background: url(../img/logo2.svg) center center no-repeat #000;
+		background-size: 80%;
+	}
+}
